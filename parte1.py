@@ -1,6 +1,4 @@
 import csv
-
-
 def lista_alumno_notas_y_asistencia():
     with open('calificaciones.csv', 'r') as f:
         reader = csv.reader(f)
@@ -11,3 +9,4 @@ def lista_alumno_notas_y_asistencia():
         lista_ordenada = sorted(lista, key=lambda x: x[0])
         return lista_ordenada
 print(lista_alumno_notas_y_asistencia())
+
