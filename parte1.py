@@ -10,4 +10,4 @@ def lista_alumno_notas_y_asistencia():
         lista.pop(0)
         lista_ordenada = sorted(lista, key=lambda x: x[0])
         return lista_ordenada
-
+print(lista_alumno_notas_y_asistencia())
