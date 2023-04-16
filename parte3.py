@@ -5,20 +5,22 @@ y devuelva dos listas, una con los alumnos aprobados y otra con los alumnos susp
 """
 import csv
 with open('calificaciones.csv', encoding='utf-8-sig') as f:
-    estudiante={}
+    
     reader = f.readlines()
     lista = []
     for row in reader:
-        estudiante["Apellidos"] = row[0]
-        estudiante["Nombre"] = row[1]
-        estudiante["Asistencia"] = row[2]
-        estudiante["Parcial1"] = row[3]
-        estudiante["Parcial2"] = row[4]
-        estudiante["Ordinaria1"] = row[5]
-        estudiante["Ordianria2"] = row[6]
-        estudiante["Practicas"] = row[7]
-        estudiante["PracticasOrdinaria"] = row[8]
-    lista.append(estudiante)
-    lista_ordenada = 1
+        palabra = row.split(";")
+        estudiante={}
+        estudiante["Apellidos"] = palabra[0]
+        estudiante["Nombre"] = palabra[1]
+        estudiante["Asistencia"] = palabra[2]
+        estudiante["Parcial1"] = palabra[3]
+        estudiante["Parcial2"] = palabra[4]
+        estudiante["Ordinaria1"] = palabra[5]
+        estudiante["Ordianria2"] = palabra[6]
+        estudiante["Practicas"] = palabra[7]
+        estudiante["PracticasOrdinaria"] = palabra[8]
+        lista.append(estudiante)
+    
     lista.pop(0)
     print(lista)
