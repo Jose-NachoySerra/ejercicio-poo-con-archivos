@@ -20,3 +20,6 @@ def calcular_nota_final(lista):
         nota_teorico2 = parcial_teorico2 * 0.3
         nota_practico = parcial_practico * 0.4
         nota_final = nota_teorico1 + nota_teorico2 + nota_practico
+
+        alumno ['nota_final'] = nota_final
+    return lista
